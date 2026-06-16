@@ -4,7 +4,7 @@ const password = document.getElementById("password");
 const checkbox = document.getElementById("checkbox");
 const existingBtn = document.getElementById("existing");
 
-// Check if user data exists in localStorage
+// Check if saved credentials exist
 function checkStoredUser() {
     const savedUsername = localStorage.getItem("username");
     const savedPassword = localStorage.getItem("password");
