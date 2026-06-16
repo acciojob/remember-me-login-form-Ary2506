@@ -4,19 +4,22 @@ const password = document.getElementById("password");
 const checkbox = document.getElementById("checkbox");
 const existingBtn = document.getElementById("existing");
 
+// Check if user data exists in localStorage
 function checkStoredUser() {
     const savedUsername = localStorage.getItem("username");
     const savedPassword = localStorage.getItem("password");
 
     if (savedUsername && savedPassword) {
-        existingBtn.style.display = "block";
+        existingBtn.style.display = "inline-block";
     } else {
         existingBtn.style.display = "none";
     }
 }
 
+// Run on page load
 checkStoredUser();
 
+// Handle form submission
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -36,6 +39,7 @@ form.addEventListener("submit", function (e) {
     checkStoredUser();
 });
 
+// Existing user login
 existingBtn.addEventListener("click", function () {
     const savedUsername = localStorage.getItem("username");
 
